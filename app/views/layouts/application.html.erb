@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "CurieOS" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "" %>">
     <title>Profile</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body class="container">
+    <div class="d-flex align-items-start">
+        <header class="card col-3">
+            <%= render 'layouts/navigation' %>
+        </header>
+        <main class="card col-9" role="main">
+            <%= content_for?(:content) ? yield(:content) : yield %>
+        </main>
+    </div>
+</body>
+
 </html>

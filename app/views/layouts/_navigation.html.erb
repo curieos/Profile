@@ -1,16 +1,24 @@
-<div class="card-body">
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
-</div>
+<nav class="card navbar-side navbar-side-expand-md navbar-light" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse card-body" id="navbar-collapse">
+        <a class="navbar-brand m-0" href="<%= posts_path %>">
+            <%= image_tag "curieOS_black_white.png", class: "logo" %>
+        </a>
+        <ul class="navbar-nav flex-column">
+            <li class="nav-item">
+                <%= link_to "Home", posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Blog", posts_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

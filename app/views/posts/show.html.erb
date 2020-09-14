@@ -9,7 +9,7 @@
     </header>
     <div class="card-body">
 		<p>
-			<%= @post.body %>
+			<%= sanitize @post.body %>
 		</p>
 	</div>
 </div>

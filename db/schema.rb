@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_09_14_233855) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "slug"
-    t.string "image_url_string"
+    t.string "image_url"
     t.text "body"
     t.boolean "published"
     t.datetime "created_at", precision: 6, null: false

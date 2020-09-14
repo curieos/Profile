@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     create_table :posts do |t|
       t.string :title
       t.string :slug
-      t.string :image_url_string
+      t.string :image_url
       t.text :body
       t.boolean :published
 

@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validate :valid_role
   has_secure_password
 
+  has_and_belongs_to_many :posts
+
   private
 
   def valid_role

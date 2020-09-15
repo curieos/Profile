@@ -4,9 +4,9 @@
 
 <% content_for :content do %>
 <div class="card">
-    <header class="card-header text-center">
+    <div class="card-header text-center">
         <h2><%= @post.title %></h2>
-    </header>
+    </div>
     <div class="card-body">
 		<p>
 			<%= sanitize @post.body %>

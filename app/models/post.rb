@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   validates :image_url, http_url: true
   validates :content, length: { minimum: 100, maximum: 10_000 }
 
-  has_and_belongs_to_many :users
+  belongs_to :users
 end

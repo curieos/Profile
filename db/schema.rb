@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_172434) do
+ActiveRecord::Schema.define(version: 2020_09_15_175657) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -32,13 +32,8 @@ ActiveRecord::Schema.define(version: 2020_09_15_172434) do
     t.boolean "published"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
-  end
-
-  create_table "posts_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "post_id", null: false
-    t.index ["post_id", "user_id"], name: "index_posts_users_on_post_id_and_user_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
